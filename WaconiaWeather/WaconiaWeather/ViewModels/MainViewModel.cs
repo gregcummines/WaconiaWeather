@@ -28,9 +28,17 @@ namespace WaconiaWeather.ViewModels
             set { SetProperty(ref currentTemperature, value);  }
         }
 
+        private DateTime lastUpdated = DateTime.Now;
+        public DateTime LastUpdated
+        {
+            get { return lastUpdated; }
+            set { SetProperty(ref lastUpdated, value); }
+        }
+
         private void UpdateTemperature()
         {
             CurrentTemperature = weatherService.GetTemperature();
+            LastUpdated = DateTime.Now;
         }
     }
 }
