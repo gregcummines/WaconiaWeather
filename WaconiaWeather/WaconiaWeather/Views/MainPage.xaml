@@ -24,7 +24,7 @@
         <Button Text="Refresh"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="Center"
-                Clicked="Button_Clicked" />
+                 />
     </StackLayout>
 
 </ContentPage>
