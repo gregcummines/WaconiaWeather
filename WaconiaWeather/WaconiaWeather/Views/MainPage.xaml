@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:WaconiaWeather"
+             x:Class="WaconiaWeather.MainPage">
+
+    <StackLayout>
+        <Label Text="Gregs Waconia Weather App"
+           TextColor="#4169e1" 
+           Font="Bold,20"
+           HorizontalOptions="Start"
+           VerticalOptions="Center" />
+        <Label Text="{Binding CurrentTemperature, StringFormat='Waconia Temperature: {0}'}" 
+           HorizontalOptions="Start"
+           VerticalOptions="Center" />
+        <Label Text="{Binding LastUpdated, StringFormat='LastUpdated: {0}'}" 
+           HorizontalOptions="Start"
+           VerticalOptions="Center" />
+        <Label Text="The weather is retrieved every 30 seconds..."
+           TextColor="red" 
+           Font="Italics,12"
+           HorizontalOptions="Start"
+           VerticalOptions="Center" />
+        <Button Text="Refresh"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked" />
+    </StackLayout>
+
+</ContentPage>
