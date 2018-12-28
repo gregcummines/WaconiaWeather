@@ -17,8 +17,6 @@ namespace WaconiaWeather
         public MainPage()
         {
             InitializeComponent();
-
-            this.BindingContext = new MainViewModel();
         }
     }
 }
