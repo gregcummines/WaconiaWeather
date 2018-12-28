@@ -13,7 +13,7 @@ namespace WaconiaWeather.ViewModels
         public MainViewModel()
         {
             UpdateTemperature();
-            Device.StartTimer(TimeSpan.FromSeconds(30), () =>
+            Device.StartTimer(TimeSpan.FromSeconds(60), () =>
             {
                 UpdateTemperature();
 

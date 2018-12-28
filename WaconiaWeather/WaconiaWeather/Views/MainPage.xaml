@@ -19,7 +19,7 @@
         <Label Text="{Binding LastUpdated, StringFormat='LastUpdated: {0}'}" 
            HorizontalOptions="Start"
            VerticalOptions="Center" />
-        <Label Text="The weather is retrieved every 30 seconds..."
+        <Label Text="The weather is retrieved every 60 seconds..."
            TextColor="red" 
            Font="Italics,12"
            HorizontalOptions="Start"
