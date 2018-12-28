@@ -7,27 +7,21 @@
     <ContentPage.BindingContext>
       <vm:MainViewModel/>
     </ContentPage.BindingContext>
-    <StackLayout>
+    <FlexLayout Direction="Column"
+                AlignItems="Center"
+                JustifyContent="SpaceEvenly">
         <Label Text="Gregs Waconia Weather App"
-           TextColor="#4169e1" 
-           Font="Bold,20"
-           HorizontalOptions="Start"
-           VerticalOptions="Center" />
-        <Label Text="{Binding CurrentTemperature, StringFormat='Waconia Temperature: {0}'}" 
-           HorizontalOptions="Start"
-           VerticalOptions="Center" />
-        <Label Text="{Binding LastUpdated, StringFormat='LastUpdated: {0}'}" 
-           HorizontalOptions="Start"
-           VerticalOptions="Center" />
+                TextColor="#4169e1" 
+                Font="Bold,20" />
+        <Label Text="{Binding CurrentTemperature, StringFormat='Waconia Temperature: {0}'}"  />
+        <Label Text="{Binding LastUpdated, StringFormat='LastUpdated: {0}'}" />
         <Label Text="The weather is retrieved every 60 seconds..."
-           TextColor="red" 
-           Font="Italics,12"
-           HorizontalOptions="Start"
-           VerticalOptions="Center" />
+                TextColor="red" 
+                Font="Italics,12" />
         <Button Text="Refresh"
-                VerticalOptions="CenterAndExpand"
-                HorizontalOptions="Center"
-                Command="{Binding RefreshCommand}" />
-    </StackLayout>
-
+            Command="{Binding RefreshCommand}" />
+        <ActivityIndicator IsVisible="{Binding IsLoading}" IsRunning="{Binding IsLoading}" />
+    </FlexLayout>
 </ContentPage>
+
+
