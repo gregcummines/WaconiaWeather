@@ -27,7 +27,7 @@
         <Button Text="Refresh"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="Center"
-                 />
+                Command="{Binding RefreshCommand}" />
     </StackLayout>
 
 </ContentPage>
